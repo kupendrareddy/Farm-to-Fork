@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Customer Sign-Up</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{{ url_for('static', filename='fonts/material-design-iconic-font/css/material-design-iconic-font.css') }} ">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/datepicker.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/member_signup.css') }}">
+	</head>
+	<body>
+		<div class="wrapper">
+            <form action="" id="wizard" action="{{ url_for('cus_signup') }}" method="POST">
+        		<!-- SECTION 1 -->
+                <h4></h4>
+                <section>
+                    <h3>Basic details</h3>
+                	<div class="form-row">
+                        <div class="form-holder">
+                            <i class="zmdi zmdi-account"></i>
+                            <input type="text" class="form-control" placeholder="First Name" name="fname">
+                        </div>
+                        <div class="form-holder">
+                            <i class="zmdi zmdi-account"></i>
+                            <input type="text" class="form-control" placeholder="Last Name" name="lname">
+                        </div>
+                	</div>
+                    <div class="form-row">
+                        <div class="form-holder">
+                            <i class="zmdi zmdi-email"></i>
+                            <input type="text" class="form-control" placeholder="Email ID" name="email">
+                        </div>
+                        <div class="form-holder">
+                            <i class="zmdi zmdi-account-box-o"></i>
+                            <input type="text" class="form-control" placeholder="Your Aadhaar ID" name="aadhaar">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-holder">
+                            <i class="zmdi zmdi-home"></i>
+                            <input type="text" class="form-control" placeholder="D.No" name="dno">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-holder">
+                                <i class="zmdi zmdi-pin"></i>
+                                <input type="text" class="form-control" placeholder="State" name="state">
+                            </div>
+                            <div class="form-holder">
+                                <i class="zmdi zmdi-pin-drop"></i>
+                                <input type="text" class="form-control" placeholder="City" name="city">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-holder">
+                            <i class="zmdi zmdi-pin"></i>
+                            <input type="text" class="form-control" placeholder="Zip Code" name="zipcode">
+                        </div>
+                        <div class="form-holder">
+                            <i class="zmdi zmdi-smartphone-android"></i>
+                            <input type="text" class="form-control" placeholder="Phone Number" name="phone">
+                        </div>
+                    </div>
+                </section>
+
+				<!-- SECTION 2 -->
+                <h4></h4>
+                <section>
+                	<h3>Password</h3>
+                    <div class="form-row">
+                        <div class="form-holder w-100">
+                            <input type="password" class="form-control" placeholder="New Password" name="password">
+                            <i class="zmdi zmdi-lock-open"></i>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-holder w-100">
+                            <input type="password" class="form-control" placeholder="Confirm New Password">
+                            <i class="zmdi zmdi-lock-open"></i>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 3 -->
+                <h4></h4>
+                <section>
+                    <h3></h3>
+                    <div class="form-row">
+                        <div class="form-holder w-100">
+                            <div class="text-center">
+                                <input class="submit" type="submit" value="Create Account" name="Submit">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </form>
+		</div>
+
+
+
+</body>
+</html>
